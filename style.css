@@ -1,0 +1,606 @@
+/*
+Theme Name: Peanut Butter 2015
+Theme URI: http://underscores.me/
+Author: Digital communications team
+Author URI: http://digitalcommunications.wp.st-andrews.ac.uk/
+Description: Underscores (_s)
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pb2015
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Peanut Butter 2015 is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# St Andrews digital pattern library
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/**
+ * Styles to setup the use of genericons to show icons throughout the them
+ * Adapted from Twenty Fifteen's CSS (see section 2.0 Genericons)
+ *
+ * @package Peanut Butter 2015
+ */
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.post-navigation .nav-previous a:before,
+.post-navigation .nav-next a:after,
+.posts-navigation .nav-previous a:before,
+.posts-navigation .nav-next a:after
+ {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: "Genericons";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  vertical-align: top; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+p {
+  orphans: 3;
+  widows: 3; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+blockquote {
+  border: none;
+  margin: 40px;
+  font-size: inherit;
+  font-style: italic;
+  line-height: inherit; }
+  blockquote:nth-child(1) {
+    margin-top: 0; }
+
+abbr {
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.lead {
+  font-size: 36px;
+  font-family: 'PT Sans', sans-serif; }
+
+.end {
+  margin: 40px 0;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase; }
+  .end:before {
+    content: '\f449';
+    font-size: 36px;
+    margin-left: -8px;
+    margin-top: -5px;
+    padding-right: 10px; }
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: black;
+    display: block;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block; }
+
+.hentry {
+  margin: 0 0 1.5em; }
+
+.post {
+  padding: 1em 0 2em;
+  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1); }
+
+.byline,
+.updated:not(.published) {
+  display: none; }
+
+.single .byline,
+.group-blog .byline {
+  display: inline; }
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
+
+.entry-content {
+  font-size: 22px;
+  line-height: 1.5; }
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
+.entry-meta {
+  color: #888;
+  margin: 5px 0; }
+
+.entry-meta a {
+  color: #888;
+  font-weight: normal; }
+
+.entry-footer, .entry-header {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px; }
+
+.post-format-type, .posted-on, .entry-meta .author,
+.cat-links, .tags-links, .comments-link {
+  margin-right: 1em; }
+
+.post-format-type, .posted-on, .entry-meta .author {
+  text-transform: uppercase; }
+
+.post-format-type {
+  font-weight: bold; }
+
+.author .avatar-default {
+  display: none; }
+
+.author .avatar {
+  margin-right: 0.35em;
+  vertical-align: -1px; }
+
+.cat-links:before {
+  content: "\f301";
+  margin-right: .15em; }
+
+.tags-links:before {
+  content: '\f302';
+  margin-right: .15em; }
+
+.comments-link:before {
+  content: '\f300';
+  margin-right: .15em; }
+
+.featured-image-section {
+  height: 300px;
+  background-size: cover;
+  background-position: center center; }
+
+.featured-image {
+  margin-bottom: 1em; }
+
+.featured-image img {
+  width: 100%;
+  max-height: 400px; }
+
+.post-navigation, .posts-navigation {
+  padding: 0 0 1em 0;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px; }
+  .post-navigation .nav-previous, .posts-navigation .nav-previous {
+    float: left; }
+  .post-navigation .nav-next, .posts-navigation .nav-next {
+    float: right; }
+  .post-navigation:after, .posts-navigation:after {
+    content: " ";
+    display: table;
+    clear: both; }
+  .post-navigation .nav-previous a:before, .posts-navigation .nav-previous a:before {
+    content: '\f430';
+    text-decoration: none; }
+  .post-navigation .nav-next a:after, .posts-navigation .nav-next a:after {
+    content: '\f429';
+    text-decoration: none; }
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title,
+.single .format-aside .entry-title {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/**
+ * Comment styles
+ *
+ * This was initially adapted from the source code in the Twenty Fifteen
+ * theme; see section 12.3 in the CSS source.
+ *
+ * @package Peanut Butter 2015
+ */
+.comments-area {
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  padding: 7.6923% 0; }
+
+.comments-area > :last-child {
+  margin-bottom: 0; }
+
+.comment-list + .comment-respond {
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1); }
+
+.comment-list + .comment-respond,
+.comment-navigation + .comment-respond {
+  padding-top: 1.6em; }
+
+.comments-title,
+.comment-reply-title {
+  line-height: 1.3333; }
+
+.comments-title {
+  margin-bottom: 1.3333em; }
+
+.comment-list {
+  list-style: none;
+  margin: 0; }
+
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  padding: 1.6em 0; }
+
+.comment-list .children {
+  list-style: none;
+  margin: 0; }
+
+.comment-list .children > li {
+  padding-left: 0.8em; }
+
+.comment-author {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  margin-bottom: 0.4em; }
+
+.comment-author a:hover {
+  border-bottom: 1px solid #707070;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.7); }
+
+.comment-author .avatar {
+  float: left;
+  height: 24px;
+  margin-right: 0.8em;
+  width: 24px; }
+
+.bypostauthor > article .fn:after {
+  content: "\f304";
+  position: relative;
+  top: 5px;
+  left: 3px; }
+
+.comment-metadata,
+.pingback .edit-link {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  line-height: 1.5; }
+
+.comment-metadata a,
+.pingback .edit-link a {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7); }
+
+.comment-metadata a:hover,
+.pingback .edit-link a:hover {
+  border-bottom: 1px solid #333; }
+
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .edit-link a:hover,
+.pingback .edit-link a:focus {
+  color: #333; }
+
+.comment-metadata {
+  margin-bottom: 1.6em; }
+
+.comment-metadata .edit-link {
+  margin-left: 1em; }
+
+.pingback .edit-link {
+  margin-left: 1em; }
+
+.pingback .edit-link:before {
+  top: 5px; }
+
+.comment-content ul,
+.comment-content ol {
+  margin: 0 0 1.6em 1.3333em; }
+
+.comment-content li > ul,
+.comment-content li > ol {
+  margin-bottom: 0; }
+
+.comment-content > :last-child {
+  margin-bottom: 0; }
+
+.comment-list .reply a {
+  border: 1px solid #eaeaea;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2em;
+  padding: 0.4167em 0.8333em;
+  text-transform: uppercase; }
+
+.comment-list .reply a:hover,
+.comment-list .reply a:focus {
+  border-color: #333;
+  color: #333;
+  outline: 0; }
+
+.comment-form {
+  padding-top: 1.6em; }
+
+.comment-form label {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  font-weight: 700;
+  display: block;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-transform: uppercase; }
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form input[type="submit"] {
+  width: 100%; }
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags {
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  line-height: 1.5;
+  margin-bottom: 2em; }
+
+.logged-in-as a:hover {
+  border-bottom: 1px solid #333; }
+
+.no-comments {
+  border-top: 1px solid #eaeaea;
+  border-top: 1px solid rgba(51, 51, 51, 0.1);
+  color: #707070;
+  color: rgba(51, 51, 51, 0.7);
+  font-weight: 700;
+  padding-top: 1.6em; }
+
+.comment-navigation + .no-comments {
+  border-top: 0; }
+
+.form-allowed-tags code {
+  font-family: Inconsolata, monospace; }
+
+.form-submit {
+  margin-bottom: 0; }
+
+.required {
+  color: #c0392b; }
+
+.comment-reply-title small a {
+  border: 0;
+  float: right;
+  height: 32px;
+  overflow: hidden;
+  width: 26px; }
+
+.comment-reply-title small a:before {
+  content: "\f405";
+  position: relative;
+  top: -3px; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
+  .wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .wp-caption .wp-caption-text {
+    margin: 0.8075em 0; }
+
+.wp-caption-text {
+  text-align: center; }
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+  margin-bottom: 1.5em; }
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%; }
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%; }
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%; }
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%; }
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%; }
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%; }
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%; }
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%; }
+
+.gallery-caption {
+  display: block; }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Homepage
+--------------------------------------------------------------*/
+.homepage #featured-story {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.homepage #featured-story h2 {
+margin-top: -14px;
+}
+
+.homepage #more-stories {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.homepage .news-image img {
+margin-top: 50px;
+}
+
+.homepage hr {
+  border-top: 1px solid #ededed;
+  border-bottom: none;
+  height: 0px;
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.homepage .tab-hr {
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.homepage .tile-grid h2 {
+  font-size: 2.5em;
+  color: #444444;
+  margin: 10px 0 20px;
+  text-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+}
+
+.homepage .tile {
+  box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.25);
+  max-width: 360px;
+}
+.homepage .tile p {
+  height: auto;
+  min-height: 105px;
+}
