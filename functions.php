@@ -11,7 +11,7 @@
  */
 
 // Default pattern library version to use if none set in the theme options.
-define('DPL_VERSION_DEFAULT','0.5.2');
+define('DPL_VERSION_DEFAULT','0.5.3-rc3');
 
 /**
  * Set the content width based on the theme's design and stylesheet.
